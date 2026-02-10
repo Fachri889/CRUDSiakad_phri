@@ -11,6 +11,7 @@
 
     <title>PHP CRUD - PPLG 1</title>
 
+
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -35,7 +36,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">PHP CRUD  PPLG 1<sup></sup></div>
+                <div class="sidebar-brand-text mx-3">PHP CRUD PPLG 1<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -52,22 +53,20 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
+            
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Bank data</span>
+                    <span>Data Akademik</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="siswa/siswa.php">Siswa</a>
                         <a class="collapse-item" href="cards.html">Kelas</a>
-                        <a class="collapse-item" href="cards.html">Jurusan</a>
+                         <a class="collapse-item" href="cards.html">Jurusan</a>
                     </div>
                 </div>
             </li>
@@ -82,7 +81,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                       
+                        <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="utilities-color.html">Colors</a>
                         <a class="collapse-item" href="utilities-border.html">Borders</a>
                         <a class="collapse-item" href="utilities-animation.html">Animations</a>
@@ -94,7 +93,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-           
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -118,12 +116,12 @@
                     </button>
 
                     
+
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                      
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                       
+                       
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -136,18 +134,8 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
+                               
+                            
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -166,18 +154,17 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Halaman Siswa</h1>
+                    <div class="row">
 
-                </div>
-                <!-- /.container-fluid -->
 
-                 <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <a href="tambahsiswa.php" class="php btn btn-primary">Tambah Data</a>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <a href="tambahsiswa.php" class="php btn btn-primary">Tambah Data</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -185,21 +172,19 @@
                                             <th>NISN</th>
                                             <th>Email</th>
                                             <th>Jenis Kelamin</th>
-                                            <th>Aksi</th>
+                                            <th>Edit</th>
                                         </tr>
-                                    </thead>
                                     
-                                    <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>Karim Abdul Jabbar</td>
-                                            <td>32947913</td>
-                                            <td>karimtzy12@gmail.com</td>
-                                            <td>Pria</td>
-                                            <td><a href="#" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-                                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                        
-                                        </td>
+                                            <td>Karim</td>
+                                            <td>081234</td>
+                                            <td>karimganteng@gmail.com</td>
+                                            <td>Laki - Laki</td>
+                                            <td>
+                                                <a href="editsiswa.php" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+                                                <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -208,14 +193,22 @@
                     </div>
 
                 </div>
+                   
+</div>
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+                </div>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
-            </div>
-            <!-- End of Main Content -->
 
+            <!-- Footer -->
            
+             
+            <!-- End of Footer -->
 
         </div>
         <!-- End of Content Wrapper -->
