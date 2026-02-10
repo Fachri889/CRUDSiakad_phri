@@ -166,6 +166,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
+                                        
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Siswa</th>
@@ -174,18 +175,28 @@
                                             <th>Jenis Kelamin</th>
                                             <th>Edit</th>
                                         </tr>
+
+                                        <?php
+                                            include '../db.php';
+                                            $i = 1;
+                                            $data = mysqli_query($koneksi, "SELECT * FROM siswa");
+                                            while($d = mysqli_fetch_array($data)){
+                                        ?>
                                     
                                         <tr>
-                                            <td>1</td>
-                                            <td>Karim</td>
-                                            <td>081234</td>
-                                            <td>karimganteng@gmail.com</td>
-                                            <td>Laki - Laki</td>
+                                            <td><?php echo $i++ ?></td>
+                                            <td><?php echo $d['nama'] ?></td>
+                                            <td><?php echo $d['nisn'] ?></td>
+                                            <td><?php echo $d['email'] ?></td>
+                                            <td><?php echo $d['jk'] ?></td>
                                             <td>
                                                 <a href="editsiswa.php" class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
                                                 <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
                                             </td>
                                         </tr>
+                                        <?php
+                                            }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
